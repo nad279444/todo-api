@@ -4,11 +4,12 @@ import mongoose from 'mongoose';
 import TodoModel from './schemas/todo_schema.js';
 import cors from 'cors';
 
+
 dotenv.config()
 
 const app = express();
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 
 const port = 3000 || process.env.port 
 const db = process.env.DB_URL
